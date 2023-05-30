@@ -29,7 +29,7 @@ jobs:
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy winrar.exe C:\Users\Public\Desktop\winrar.exe
-        copy acunetix.7z C:\Users\Public\Desktop\acunetiz.7z
+        copy acunetix.7z C:\Users\Public\Desktop\acunetix.7z
         
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
